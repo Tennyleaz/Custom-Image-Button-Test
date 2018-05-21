@@ -1,0 +1,13 @@
+﻿<Window x:Class="Custom_Image_Button_Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Custom_Image_Button_Test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <local:XImageButton x:Name="btn1" ForeImages="/直接掃描(單面).png" NormalImage="/直接掃描(不顯示).png" DisabledImage="/直接掃描(單面).png" HoverImage="/直接掃描(雙面)_back.png" PressedImage="/直接掃描(雙面)_front.png"
+                            ToolTip="test tool tip" Width="250" Height="40" ImageWidth="200" ImageHeight="30" TextContent="This is custom text" Background="GreenYellow" BorderThickness="1" BorderBrush="Gray"/>
+    </Grid>
+</Window>

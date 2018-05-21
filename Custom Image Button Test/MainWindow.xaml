@@ -8,6 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <local:XImageButton x:Name="btn1" ForeImages="/直接掃描(單面).png" NormalImage="/直接掃描(不顯示).png" DisabledImage="/直接掃描(單面).png" HoverImage="/直接掃描(雙面)_back.png" PressedImage="/直接掃描(雙面)_front.png"
-                            ToolTip="test tool tip" Width="250" Height="40" ImageWidth="200" ImageHeight="30" TextContent="This is custom text" Background="GreenYellow" BorderThickness="1" BorderBrush="Gray"/>
+                            ToolTip="test tool tip" Width="250" Height="40" ImageWidth="200" ImageHeight="30" TextContent="This is custom text" Background="GreenYellow" BorderThickness="1" BorderBrush="Gray"
+                            Click="btn1_Click"/>
     </Grid>
 </Window>

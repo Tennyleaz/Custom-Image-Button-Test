@@ -24,5 +24,10 @@ namespace Custom_Image_Button_Test
         {
             InitializeComponent();
         }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(this, "Clicked");
+        }
     }
 }

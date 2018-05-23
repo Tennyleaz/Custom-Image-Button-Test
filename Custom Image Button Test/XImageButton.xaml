@@ -9,14 +9,14 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <ControlTemplate x:Key="ImageButtonTemplate" TargetType="{x:Type Button}">
-            <Grid>
-                <Border 
-                        x:Name="Background" 
+            <Grid Name="ButtonGrid">
+                <!--<Border 
+                        x:Name="BackgroundBorder" 
                         Background="{TemplateBinding Background}" 
                         BorderBrush="{TemplateBinding BorderBrush}" 
                         BorderThickness="0" 
                         CornerRadius="0"         
-                        Visibility="{Binding ElementName=myUserControl, Path=BorderVisibility}"/>
+                        Visibility="{Binding ElementName=myUserControl, Path=BorderVisibility}"/>-->
                 <TextBlock Text="{Binding ElementName=myUserControl, Path=TextContent}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Foreground="Black" Background="Transparent" Panel.ZIndex="2"/>
                 <Image x:Name="fImage" Source="{Binding ElementName=myUserControl, Path=ForeImages}" Height="20" Width="20"/>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
@@ -26,10 +26,11 @@
                                Width="{Binding ElementName=myUserControl, Path=ImageWidth}"
                                ToolTip="{TemplateBinding ToolTip}"/>
                 </StackPanel>
-            </Grid>
+            </Grid>            
             <ControlTemplate.Triggers>
                 <Trigger Property="IsMouseOver" Value="true">
                     <Setter TargetName="ButtonImage" Property="Source" Value="{Binding ElementName=myUserControl, Path=HoverImage}"/>
+                    <Setter TargetName="ButtonGrid" Property="Background" Value="{Binding ElementName=myUserControl, Path=HoverBrush}"/>
                 </Trigger>
                 <Trigger Property="IsPressed" Value="true">
                     <Setter TargetName="ButtonImage" Property="Source" Value="{Binding ElementName=myUserControl, Path=PressedImage}"/>
@@ -46,7 +47,7 @@
             <Style TargetType="{x:Type Button}" BasedOn="{x:Null}">
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="Margin" Value="0" />
-                <Setter Property="BorderThickness" Value="0"/>
+                <!--<Setter Property="BorderThickness" Value="0"/>-->
                 <!--<Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
                 <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}" />
                 <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />-->

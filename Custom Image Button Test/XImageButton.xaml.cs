@@ -101,6 +101,13 @@ namespace Custom_Image_Button_Test
         public static readonly DependencyProperty TextContentProperty =
             DependencyProperty.Register("TextContent", typeof(string), typeof(XImageButton), new UIPropertyMetadata(null));
 
+        public SolidColorBrush HoverBrush
+        {
+            get { return (SolidColorBrush)GetValue(HoverBrushProperty); }
+            set { SetValue(HoverBrushProperty, value); }
+        }
+        public static readonly DependencyProperty HoverBrushProperty =
+            DependencyProperty.Register("HoverBrush", typeof(SolidColorBrush), typeof(XImageButton), new UIPropertyMetadata(Brushes.Transparent));
 
         public event RoutedEventHandler Click;
         private void button_Click(object sender, RoutedEventArgs e)

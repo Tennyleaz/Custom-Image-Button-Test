@@ -105,12 +105,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="直接掃描%28不顯示%29.png" />
-    <Resource Include="直接掃描%28單面%29.png" />
-    <Resource Include="直接掃描%28雙面%29_back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="直接掃描%28雙面%29_front.png" />
+    <Resource Include="images\img_disable.png" />
+    <Resource Include="images\img_down.png" />
+    <Resource Include="images\img_normal.png" />
+    <Resource Include="images\img_over.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

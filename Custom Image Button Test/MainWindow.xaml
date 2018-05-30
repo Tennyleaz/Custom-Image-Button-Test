@@ -9,7 +9,11 @@
     <Grid>
         <local:XImageButton x:Name="btn1" NormalImage="/images/img_normal.png" DisabledImage="/images/img_disable.png" HoverImage="/images/img_over.png" PressedImage="/images/img_down.png"
                             ToolTip="test tool tip" TextContent="　　　　　bla..."
-                            Width="250" Height="40" ImageWidth="48" ImageHeight="36" Background="Gray" BorderThickness="2" BorderBrush="Black" HoverBrush="AliceBlue"
+                            Width="250" Height="40" ImageWidth="48" ImageHeight="36" Background="Gray" BorderThickness="2" BorderBrush="Black" HoverBrush="AliceBlue" PressedBrush="Green"
                             Click="btn1_Click"/>
+
+        <Polygon  
+            Points="0,0 10,0 5,10 0,0"     
+            Fill="Black"/>
     </Grid>
 </Window>

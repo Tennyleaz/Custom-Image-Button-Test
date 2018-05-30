@@ -34,6 +34,7 @@
                 </Trigger>
                 <Trigger Property="IsPressed" Value="true">
                     <Setter TargetName="ButtonImage" Property="Source" Value="{Binding ElementName=myUserControl, Path=PressedImage}"/>
+                    <Setter TargetName="ButtonGrid" Property="Background" Value="{Binding ElementName=myUserControl, Path=PressedBrush}"/>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="false">
                     <Setter TargetName="ButtonImage" Property="Source" Value="{Binding ElementName=myUserControl, Path=DisabledImage}"/>
